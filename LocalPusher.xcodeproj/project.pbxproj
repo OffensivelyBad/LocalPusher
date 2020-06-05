@@ -13,7 +13,36 @@
 		29A2F621248AE6F40057FC9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A2F61F248AE6F40057FC9C /* Main.storyboard */; };
 		29A2F623248AE6F60057FC9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A2F622248AE6F60057FC9C /* Assets.xcassets */; };
 		29A2F626248AE6F60057FC9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A2F624248AE6F60057FC9C /* LaunchScreen.storyboard */; };
+		29A2F634248AEA5A0057FC9C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A2F633248AEA5A0057FC9C /* UserNotifications.framework */; };
+		29A2F636248AEA5A0057FC9C /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A2F635248AEA5A0057FC9C /* UserNotificationsUI.framework */; };
+		29A2F639248AEA5A0057FC9C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F638248AEA5A0057FC9C /* NotificationViewController.swift */; };
+		29A2F63C248AEA5A0057FC9C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A2F63A248AEA5A0057FC9C /* MainInterface.storyboard */; };
+		29A2F640248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29A2F631248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29A2F63E248AEA5A0057FC9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29A2F60E248AE6F40057FC9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A2F630248AEA5A0057FC9C;
+			remoteInfo = LocalPusherNotificationExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		29A2F644248AEA5A0057FC9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29A2F640248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		29A2F616248AE6F40057FC9C /* LocalPusher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPusher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +53,12 @@
 		29A2F622248AE6F60057FC9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29A2F625248AE6F60057FC9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29A2F627248AE6F60057FC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29A2F631248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LocalPusherNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A2F633248AEA5A0057FC9C /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		29A2F635248AEA5A0057FC9C /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		29A2F638248AEA5A0057FC9C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		29A2F63B248AEA5A0057FC9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		29A2F63D248AEA5A0057FC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +69,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29A2F62E248AEA5A0057FC9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A2F636248AEA5A0057FC9C /* UserNotificationsUI.framework in Frameworks */,
+				29A2F634248AEA5A0057FC9C /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				29A2F618248AE6F40057FC9C /* LocalPusher */,
+				29A2F637248AEA5A0057FC9C /* LocalPusherNotificationExtension */,
+				29A2F632248AEA5A0057FC9C /* Frameworks */,
 				29A2F617248AE6F40057FC9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				29A2F616248AE6F40057FC9C /* LocalPusher.app */,
+				29A2F631248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +114,25 @@
 			path = LocalPusher;
 			sourceTree = "<group>";
 		};
+		29A2F632248AEA5A0057FC9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29A2F633248AEA5A0057FC9C /* UserNotifications.framework */,
+				29A2F635248AEA5A0057FC9C /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29A2F637248AEA5A0057FC9C /* LocalPusherNotificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				29A2F638248AEA5A0057FC9C /* NotificationViewController.swift */,
+				29A2F63A248AEA5A0057FC9C /* MainInterface.storyboard */,
+				29A2F63D248AEA5A0057FC9C /* Info.plist */,
+			);
+			path = LocalPusherNotificationExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +143,34 @@
 				29A2F612248AE6F40057FC9C /* Sources */,
 				29A2F613248AE6F40057FC9C /* Frameworks */,
 				29A2F614248AE6F40057FC9C /* Resources */,
+				29A2F644248AEA5A0057FC9C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				29A2F63F248AEA5A0057FC9C /* PBXTargetDependency */,
 			);
 			name = LocalPusher;
 			productName = LocalPusher;
 			productReference = 29A2F616248AE6F40057FC9C /* LocalPusher.app */;
 			productType = "com.apple.product-type.application";
+		};
+		29A2F630248AEA5A0057FC9C /* LocalPusherNotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A2F641248AEA5A0057FC9C /* Build configuration list for PBXNativeTarget "LocalPusherNotificationExtension" */;
+			buildPhases = (
+				29A2F62D248AEA5A0057FC9C /* Sources */,
+				29A2F62E248AEA5A0057FC9C /* Frameworks */,
+				29A2F62F248AEA5A0057FC9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalPusherNotificationExtension;
+			productName = LocalPusherNotificationExtension;
+			productReference = 29A2F631248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +183,9 @@
 				ORGANIZATIONNAME = "Shawn Roller";
 				TargetAttributes = {
 					29A2F615248AE6F40057FC9C = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					29A2F630248AEA5A0057FC9C = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -116,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				29A2F615248AE6F40057FC9C /* LocalPusher */,
+				29A2F630248AEA5A0057FC9C /* LocalPusherNotificationExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +217,14 @@
 				29A2F626248AE6F60057FC9C /* LaunchScreen.storyboard in Resources */,
 				29A2F623248AE6F60057FC9C /* Assets.xcassets in Resources */,
 				29A2F621248AE6F40057FC9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A2F62F248AEA5A0057FC9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A2F63C248AEA5A0057FC9C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +241,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29A2F62D248AEA5A0057FC9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A2F639248AEA5A0057FC9C /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29A2F63F248AEA5A0057FC9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29A2F630248AEA5A0057FC9C /* LocalPusherNotificationExtension */;
+			targetProxy = 29A2F63E248AEA5A0057FC9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		29A2F61F248AE6F40057FC9C /* Main.storyboard */ = {
@@ -161,6 +274,14 @@
 				29A2F625248AE6F60057FC9C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		29A2F63A248AEA5A0057FC9C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29A2F63B248AEA5A0057FC9C /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,6 +404,7 @@
 		29A2F62B248AE6F60057FC9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -301,6 +423,7 @@
 		29A2F62C248AE6F60057FC9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EWH85CQYYJ;
@@ -311,6 +434,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.LocalPusher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29A2F642248AEA5A0057FC9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_FILE = LocalPusherNotificationExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.LocalPusher.LocalPusherNotificationExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29A2F643248AEA5A0057FC9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_FILE = LocalPusherNotificationExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.LocalPusher.LocalPusherNotificationExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +494,15 @@
 			buildConfigurations = (
 				29A2F62B248AE6F60057FC9C /* Debug */,
 				29A2F62C248AE6F60057FC9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A2F641248AEA5A0057FC9C /* Build configuration list for PBXNativeTarget "LocalPusherNotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A2F642248AEA5A0057FC9C /* Debug */,
+				29A2F643248AEA5A0057FC9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
