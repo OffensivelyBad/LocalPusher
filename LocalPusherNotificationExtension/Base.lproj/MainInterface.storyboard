@@ -12,46 +12,85 @@
             <objects>
                 <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="LocalPusherNotificationExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We've got it covered!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIa-yZ-fpD">
+                                <rect key="frame" x="0.0" y="15" width="320" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OZ-1K-ffY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="sq4-wN-ULe"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="khG-Ud-Ytx">
+                                <rect key="frame" x="0.0" y="50" width="320" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEC-jB-rOK">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="😟"/>
+                                        <connections>
+                                            <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="YeL-g0-vDj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9Q-6h-qW9">
+                                        <rect key="frame" x="80" y="0.0" width="80" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="😬"/>
+                                        <connections>
+                                            <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="CVc-y1-CDr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYA-Dy-qvc">
+                                        <rect key="frame" x="160" y="0.0" width="80" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="🙂"/>
+                                        <connections>
+                                            <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="oF6-NJ-ycJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gls-08-RKG">
+                                        <rect key="frame" x="240" y="0.0" width="80" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="😀"/>
+                                        <connections>
+                                            <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="1y6-zQ-nwb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aEC-jB-rOK" firstAttribute="top" secondItem="khG-Ud-Ytx" secondAttribute="top" id="YLC-k7-agG"/>
+                                    <constraint firstAttribute="bottom" secondItem="aEC-jB-rOK" secondAttribute="bottom" id="l8Z-a3-vEB"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" symbolic="YES" id="0Q0-KW-PJ6"/>
-                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="7OZ-1K-ffY" secondAttribute="bottom" id="0ql-PX-UZI"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" symbolic="YES" id="6Vq-gs-PHe"/>
-                            <constraint firstItem="7OZ-1K-ffY" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="Evg-dr-9AG"/>
-                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" symbolic="YES" id="L8K-9R-egU"/>
-                            <constraint firstAttribute="trailing" secondItem="7OZ-1K-ffY" secondAttribute="trailing" id="MWk-yC-27n"/>
-                            <constraint firstItem="7OZ-1K-ffY" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="roH-sh-7sP"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="zDA-Uh-5wB"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="khG-Ud-Ytx" secondAttribute="trailing" id="4u3-k0-MaE"/>
+                            <constraint firstAttribute="trailing" secondItem="MIa-yZ-fpD" secondAttribute="trailing" id="9Ds-mI-kE1"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="MIa-yZ-fpD" secondAttribute="trailing" id="Bxb-og-lm9"/>
+                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="EjC-pB-RfL"/>
+                            <constraint firstItem="khG-Ud-Ytx" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="HAR-ae-5ot"/>
+                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="VmV-7g-BjY"/>
+                            <constraint firstItem="khG-Ud-Ytx" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="6" id="t6B-Ax-gTa"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="khG-Ud-Ytx" secondAttribute="bottom" constant="6" id="uGv-6x-bxT"/>
+                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="15" id="uuT-H6-uzn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="37"/>
+                    <size key="freeformSize" width="320" height="120"/>
                     <connections>
-                        <outlet property="coverButton" destination="7OZ-1K-ffY" id="Ork-Ku-G4A"/>
-                        <outlet property="label" destination="GcN-lo-r42" id="lpW-cU-7IG"/>
+                        <outlet property="buttonFour" destination="gls-08-RKG" id="P9Z-YU-leP"/>
+                        <outlet property="buttonOne" destination="aEC-jB-rOK" id="36Y-zc-TqD"/>
+                        <outlet property="buttonThree" destination="CYA-Dy-qvc" id="Qs5-LB-UBo"/>
+                        <outlet property="buttonTwo" destination="L9Q-6h-qW9" id="ett-9A-tQs"/>
+                        <outlet property="questionLabel" destination="MIa-yZ-fpD" id="f2n-iq-HHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

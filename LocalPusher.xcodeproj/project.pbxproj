@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295C3D55248C1A87002A3E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C3D54248C1A87002A3E0A /* Constants.swift */; };
+		295C3D56248C1A87002A3E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C3D54248C1A87002A3E0A /* Constants.swift */; };
 		29A2F61A248AE6F40057FC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F619248AE6F40057FC9C /* AppDelegate.swift */; };
 		29A2F61C248AE6F40057FC9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F61B248AE6F40057FC9C /* SceneDelegate.swift */; };
 		29A2F61E248AE6F40057FC9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F61D248AE6F40057FC9C /* ViewController.swift */; };
@@ -45,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		295C3D54248C1A87002A3E0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		29A2F616248AE6F40057FC9C /* LocalPusher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPusher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A2F619248AE6F40057FC9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A2F61B248AE6F40057FC9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 				29A2F622248AE6F60057FC9C /* Assets.xcassets */,
 				29A2F624248AE6F60057FC9C /* LaunchScreen.storyboard */,
 				29A2F627248AE6F60057FC9C /* Info.plist */,
+				295C3D54248C1A87002A3E0A /* Constants.swift */,
 			);
 			path = LocalPusher;
 			sourceTree = "<group>";
@@ -238,6 +242,7 @@
 				29A2F61E248AE6F40057FC9C /* ViewController.swift in Sources */,
 				29A2F61A248AE6F40057FC9C /* AppDelegate.swift in Sources */,
 				29A2F61C248AE6F40057FC9C /* SceneDelegate.swift in Sources */,
+				295C3D55248C1A87002A3E0A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A2F639248AEA5A0057FC9C /* NotificationViewController.swift in Sources */,
+				295C3D56248C1A87002A3E0A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

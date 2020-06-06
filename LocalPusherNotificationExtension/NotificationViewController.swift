@@ -12,24 +12,46 @@ import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-    @IBOutlet var label: UILabel!
-    @IBOutlet var coverButton: UIButton!
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var buttonOne: UIButton!
+    @IBOutlet var buttonTwo: UIButton!
+    @IBOutlet var buttonThree: UIButton!
+    @IBOutlet var buttonFour: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.alpha = 0
+        self.setQuestionAndAnswer(forQuestion: CheckInQuestion.One)
+    }
+    
+    func setQuestionAndAnswer(forQuestion question: CheckInQuestion) {
+        switch question {
+        case CheckInQuestion.One:
+            self.buttonOne.titleLabel?.text = AnswerOne.First.rawValue
+            self.buttonTwo.titleLabel?.text = AnswerOne.Second.rawValue
+            self.buttonThree.titleLabel?.text = AnswerOne.Third.rawValue
+            self.buttonFour.titleLabel?.text = AnswerOne.Fourth.rawValue
+        case CheckInQuestion.Two:
+            self.buttonOne.titleLabel?.text = AnswerTwo.First.rawValue
+            self.buttonTwo.titleLabel?.text = AnswerTwo.Second.rawValue
+            self.buttonThree.titleLabel?.text = AnswerTwo.Third.rawValue
+            self.buttonFour.titleLabel?.text = AnswerTwo.Fourth.rawValue
+        case CheckInQuestion.Three:
+            break
+        }
     }
     
     func didReceive(_ notification: UNNotification) {
 //        self.label?.text = notification.request.content.body
     }
     
-    @IBAction func coverButtonTapped(_ sender: Any) {
-        UIView.animate(withDuration: 2.0) {
-            self.coverButton.alpha = 0
-            self.label.textColor = UIColor.red
-            self.label.alpha = 1
+    @IBAction func coverButtonTapped(_ sender: UIButton?) {
+        guard let button = sender, let label = button.titleLabel, let title = label.text else { return }
+        
+        print(title)
+        
+        UIView.animate(withDuration: 1.0) {
+            self.setQuestionAndAnswer(forQuestion: CheckInQuestion.Two)
         }
     }
 

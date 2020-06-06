@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let debitOverdraftNotificationCategory = UNNotificationCategory(identifier: "debitOverdraftNotification", actions: [], intentIdentifiers: [], options: [])
+        let debitOverdraftNotificationCategory = UNNotificationCategory(identifier: Constants.NotificationID, actions: [], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([debitOverdraftNotificationCategory])
     }
     
@@ -23,13 +23,12 @@ class ViewController: UIViewController {
             guard settings.authorizationStatus == .authorized else { return }
             
             let content = UNMutableNotificationContent()
-            content.categoryIdentifier = "debitOverdraftNotification"
-            content.title = "OVERDRAFT NOTICE!"
-            content.subtitle = "Exceed balance by $1mm"
-            content.body = "Onte time overdraft fee of $150,000"
+            content.categoryIdentifier = Constants.NotificationID
+            content.title = "Check in with yourself"
+            content.body = "Take a deep breath. How do you feel?"
             content.sound = UNNotificationSound.default
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
             
             let uuidString = UUID().uuidString
             let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)

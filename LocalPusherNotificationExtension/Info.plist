@@ -25,9 +25,9 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>UNNotificationExtensionCategory</key>
-			<string>debitOverdraftNotification</string>
+			<string>checkInNotification</string>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>0.12</real>
+			<integer>1</integer>
 			<key>UNNotificationExtensionUserInteractionEnabled</key>
 			<true/>
 			<key>UNNotificationExtensionDefaultContentHidden</key>
