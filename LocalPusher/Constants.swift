@@ -16,6 +16,7 @@ enum CheckInQuestion: String {
     case One = "How are you feeling?"
     case Two = "What have you been up to?"
     case Three = "Thanks! Do you want to tell me more?"
+    case Done = "Got it! Have a great day!"
 }
 
 enum AnswerOne: String {

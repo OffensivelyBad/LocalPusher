@@ -28,9 +28,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <state key="normal" title="😟"/>
-                                        <connections>
-                                            <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="YeL-g0-vDj"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9Q-6h-qW9">
                                         <rect key="frame" x="80" y="0.0" width="80" height="64"/>
@@ -83,6 +80,7 @@
                     <connections>
                         <outlet property="buttonFour" destination="gls-08-RKG" id="P9Z-YU-leP"/>
                         <outlet property="buttonOne" destination="aEC-jB-rOK" id="36Y-zc-TqD"/>
+                        <outlet property="buttonStack" destination="khG-Ud-Ytx" id="7Lq-wN-xvi"/>
                         <outlet property="buttonThree" destination="CYA-Dy-qvc" id="Qs5-LB-UBo"/>
                         <outlet property="buttonTwo" destination="L9Q-6h-qW9" id="ett-9A-tQs"/>
                         <outlet property="questionLabel" destination="MIa-yZ-fpD" id="f2n-iq-HHh"/>

@@ -27,7 +27,7 @@
 			<key>UNNotificationExtensionCategory</key>
 			<string>checkInNotification</string>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<integer>1</integer>
+			<real>0.25</real>
 			<key>UNNotificationExtensionUserInteractionEnabled</key>
 			<true/>
 			<key>UNNotificationExtensionDefaultContentHidden</key>

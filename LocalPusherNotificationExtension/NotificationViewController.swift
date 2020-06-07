@@ -17,28 +17,44 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     @IBOutlet var buttonTwo: UIButton!
     @IBOutlet var buttonThree: UIButton!
     @IBOutlet var buttonFour: UIButton!
+    @IBOutlet var buttonStack: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setQuestionAndAnswer(forQuestion: CheckInQuestion.One)
+        self.preferredContentSize = CGSize(width: 320, height: 140)
     }
     
     func setQuestionAndAnswer(forQuestion question: CheckInQuestion) {
+        var newQuestion = ""
+        var titleOne = ""
+        var titleTwo = ""
+        var titleThree = ""
+        var titleFour = ""
+        
         switch question {
         case CheckInQuestion.One:
-            self.buttonOne.titleLabel?.text = AnswerOne.First.rawValue
-            self.buttonTwo.titleLabel?.text = AnswerOne.Second.rawValue
-            self.buttonThree.titleLabel?.text = AnswerOne.Third.rawValue
-            self.buttonFour.titleLabel?.text = AnswerOne.Fourth.rawValue
+            newQuestion = CheckInQuestion.One.rawValue
+            titleOne = AnswerOne.First.rawValue
+            titleTwo = AnswerOne.Second.rawValue
+            titleThree = AnswerOne.Third.rawValue
+            titleFour = AnswerOne.Fourth.rawValue
         case CheckInQuestion.Two:
-            self.buttonOne.titleLabel?.text = AnswerTwo.First.rawValue
-            self.buttonTwo.titleLabel?.text = AnswerTwo.Second.rawValue
-            self.buttonThree.titleLabel?.text = AnswerTwo.Third.rawValue
-            self.buttonFour.titleLabel?.text = AnswerTwo.Fourth.rawValue
-        case CheckInQuestion.Three:
+            newQuestion = CheckInQuestion.Two.rawValue
+            titleOne = AnswerTwo.First.rawValue
+            titleTwo = AnswerTwo.Second.rawValue
+            titleThree = AnswerTwo.Third.rawValue
+            titleFour = AnswerTwo.Fourth.rawValue
+        default:
             break
         }
+        
+        self.questionLabel.text = newQuestion
+        self.buttonOne.setTitle(titleOne, for: .normal)
+        self.buttonTwo.setTitle(titleTwo, for: .normal)
+        self.buttonThree.setTitle(titleThree, for: .normal)
+        self.buttonFour.setTitle(titleFour, for: .normal)
     }
     
     func didReceive(_ notification: UNNotification) {
@@ -46,12 +62,40 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     @IBAction func coverButtonTapped(_ sender: UIButton?) {
-        guard let button = sender, let label = button.titleLabel, let title = label.text else { return }
+        guard let button = sender, let label = button.titleLabel, let buttonTitle = label.text, let question = self.questionLabel.text else { return }
         
-        print(title)
-        
-        UIView.animate(withDuration: 1.0) {
-            self.setQuestionAndAnswer(forQuestion: CheckInQuestion.Two)
+        if question == CheckInQuestion.One.rawValue {
+            self.animateToQuestion(CheckInQuestion.Two)
+        } else if question == CheckInQuestion.Two.rawValue {
+//            self.animateToQuestion(CheckInQuestion.Three)
+            self.animateToEnd()
+        } else {
+            self.animateToEnd()
+        }
+    }
+    
+    func animateToQuestion(_ question: CheckInQuestion) {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.buttonStack.alpha = 0
+            self.questionLabel.alpha = 0
+        }) { (done) in
+            self.setQuestionAndAnswer(forQuestion: question)
+            UIView.animate(withDuration: 0.25, animations: {
+                self.buttonStack.alpha = 1
+                self.questionLabel.alpha = 1
+            })
+        }
+    }
+    
+    func animateToEnd() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.buttonStack.alpha = 0
+            self.questionLabel.alpha = 0
+        }) { (done) in
+            self.questionLabel.text = CheckInQuestion.Done.rawValue
+            UIView.animate(withDuration: 0.25, animations: {
+                self.questionLabel.alpha = 1
+            })
         }
     }
 
