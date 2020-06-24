@@ -32,3 +32,31 @@ enum AnswerTwo: String {
     case Third = "👩‍💻"
     case Fourth = "👫"
 }
+
+enum AnswerTwoA: String {
+    case First = "🍸"
+    case Second = "🥬"
+    case Third = "🍔"
+    case Fourth = "☕️"
+}
+
+enum AnswerTwoB: String {
+    case First = "🏃‍♂️"
+    case Second = "🏋️‍♀️"
+    case Third = "🧘‍♀️"
+    case Fourth = "⛹️‍♀️"
+}
+
+enum AnswerTwoC: String {
+    case First = "🍗"
+    case Second = "🏃‍♂️"
+    case Third = "👩‍💻"
+    case Fourth = "👫"
+}
+
+enum AnswerTwoD: String {
+    case First = "🍗"
+    case Second = "🏃‍♂️"
+    case Third = "👩‍💻"
+    case Fourth = "👫"
+}
