@@ -41,22 +41,22 @@ enum AnswerTwoA: String {
 }
 
 enum AnswerTwoB: String {
-    case First = "🏃‍♂️"
+    case First = "🤸‍♂️"
     case Second = "🏋️‍♀️"
     case Third = "🧘‍♀️"
     case Fourth = "⛹️‍♀️"
 }
 
 enum AnswerTwoC: String {
-    case First = "🍗"
-    case Second = "🏃‍♂️"
+    case First = "📺"
+    case Second = "📱"
     case Third = "👩‍💻"
-    case Fourth = "👫"
+    case Fourth = "🎮"
 }
 
 enum AnswerTwoD: String {
-    case First = "🍗"
-    case Second = "🏃‍♂️"
-    case Third = "👩‍💻"
-    case Fourth = "👫"
+    case First = "👨‍👩‍👧‍👦"
+    case Second = "🎸"
+    case Third = "🎳"
+    case Fourth = "🎉"
 }
