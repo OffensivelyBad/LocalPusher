@@ -19,6 +19,10 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     @IBOutlet var buttonFour: UIButton!
     @IBOutlet var buttonStack: UIStackView!
     
+    var answerOne = ""
+    var answerTwo = ""
+    var answerThree = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +50,12 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             titleTwo = AnswerTwo.Second.rawValue
             titleThree = AnswerTwo.Third.rawValue
             titleFour = AnswerTwo.Fourth.rawValue
+        case CheckInQuestion.Three:
+            newQuestion = CheckInQuestion.Three.rawValue
+            titleOne = AnswerTwo.First.rawValue
+            titleTwo = AnswerTwo.Second.rawValue
+            titleThree = AnswerTwo.Third.rawValue
+            titleFour = AnswerTwo.Fourth.rawValue
         default:
             break
         }
@@ -67,11 +77,52 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         if question == CheckInQuestion.One.rawValue {
             self.animateToQuestion(CheckInQuestion.Two)
         } else if question == CheckInQuestion.Two.rawValue {
-//            self.animateToQuestion(CheckInQuestion.Three)
-            self.animateToEnd()
+//            self.getAnswers(forAnswer: <#T##AnswerTwo#>)
         } else {
             self.animateToEnd()
         }
+    }
+    
+    func handle(answer: String, toQuestion question: String) {
+        if question == CheckInQuestion.One.rawValue {
+            self.animateToQuestion(CheckInQuestion.Two)
+        } else if question == CheckInQuestion.Two.rawValue {
+            
+        } else {
+            self.animateToEnd()
+        }
+    }
+    
+    func getAnswers(forAnswer answer: AnswerTwo) -> (String, String, String, String) {
+        var answerOne = ""
+        var answerTwo = ""
+        var answerThree = ""
+        var answerFour = ""
+        
+        switch (answer) {
+        case .First:
+            answerOne = AnswerTwoA.First.rawValue
+            answerTwo = AnswerTwoA.Second.rawValue
+            answerThree = AnswerTwoA.Third.rawValue
+            answerFour = AnswerTwoA.Fourth.rawValue
+        case .Second:
+            answerOne = AnswerTwoB.First.rawValue
+            answerTwo = AnswerTwoB.Second.rawValue
+            answerThree = AnswerTwoB.Third.rawValue
+            answerFour = AnswerTwoB.Fourth.rawValue
+        case .Third:
+            answerOne = AnswerTwoC.First.rawValue
+            answerTwo = AnswerTwoC.Second.rawValue
+            answerThree = AnswerTwoC.Third.rawValue
+            answerFour = AnswerTwoC.Fourth.rawValue
+        case .Fourth:
+            answerOne = AnswerTwoD.First.rawValue
+            answerTwo = AnswerTwoD.Second.rawValue
+            answerThree = AnswerTwoD.Third.rawValue
+            answerFour = AnswerTwoD.Fourth.rawValue
+        }
+        
+        return (answerOne, answerTwo, answerThree, answerFour)
     }
     
     func animateToQuestion(_ question: CheckInQuestion) {
