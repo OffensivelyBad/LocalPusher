@@ -8,6 +8,13 @@
 
 import Foundation
 
+protocol Answer {
+    var First: String { get }
+    var Second: String { get }
+    var Third: String { get }
+    var Fourth: String { get }
+}
+
 struct Constants {
     static let NotificationID = "checkInNotification"
 }
@@ -33,30 +40,30 @@ enum AnswerTwo: String {
     case Fourth = "👫"
 }
 
-enum AnswerTwoA: String {
-    case First = "🍸"
-    case Second = "🥬"
-    case Third = "🍔"
-    case Fourth = "☕️"
+struct AnswerTwoA: Answer {
+    var First = "🍸"
+    var Second = "🥬"
+    var Third = "🍔"
+    var Fourth = "☕️"
 }
 
-enum AnswerTwoB: String {
-    case First = "🤸‍♂️"
-    case Second = "🏋️‍♀️"
-    case Third = "🧘‍♀️"
-    case Fourth = "⛹️‍♀️"
+struct AnswerTwoB: Answer {
+    var First = "🤸‍♂️"
+    var Second = "🏋️‍♀️"
+    var Third = "🧘‍♀️"
+    var Fourth = "⛹️‍♀️"
 }
 
-enum AnswerTwoC: String {
-    case First = "📺"
-    case Second = "📱"
-    case Third = "👩‍💻"
-    case Fourth = "🎮"
+struct AnswerTwoC: Answer {
+    var First = "📺"
+    var Second = "📱"
+    var Third = "👩‍💻"
+    var Fourth = "🎮"
 }
 
-enum AnswerTwoD: String {
-    case First = "👨‍👩‍👧‍👦"
-    case Second = "🎸"
-    case Third = "🎳"
-    case Fourth = "🎉"
+struct AnswerTwoD: Answer {
+    var First = "👨‍👩‍👧‍👦"
+    var Second = "🎸"
+    var Third = "🎳"
+    var Fourth = "🎉"
 }
