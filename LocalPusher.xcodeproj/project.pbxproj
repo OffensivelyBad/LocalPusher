@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		295C3D55248C1A87002A3E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C3D54248C1A87002A3E0A /* Constants.swift */; };
 		295C3D56248C1A87002A3E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C3D54248C1A87002A3E0A /* Constants.swift */; };
+		295CC31624C78A5D0050B330 /* LocalPusherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295CC31524C78A5D0050B330 /* LocalPusherTests.swift */; };
+		295CC31F24C78A940050B330 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295CC31E24C78A940050B330 /* Utilities.swift */; };
+		295CC32024C78A940050B330 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295CC31E24C78A940050B330 /* Utilities.swift */; };
+		295CC32124C78A940050B330 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295CC31E24C78A940050B330 /* Utilities.swift */; };
+		295CC33224C78BD80050B330 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C3D54248C1A87002A3E0A /* Constants.swift */; };
 		29A2F61A248AE6F40057FC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F619248AE6F40057FC9C /* AppDelegate.swift */; };
 		29A2F61C248AE6F40057FC9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F61B248AE6F40057FC9C /* SceneDelegate.swift */; };
 		29A2F61E248AE6F40057FC9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A2F61D248AE6F40057FC9C /* ViewController.swift */; };
@@ -23,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		295CC31824C78A5D0050B330 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29A2F60E248AE6F40057FC9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A2F615248AE6F40057FC9C;
+			remoteInfo = LocalPusher;
+		};
 		29A2F63E248AEA5A0057FC9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29A2F60E248AE6F40057FC9C /* Project object */;
@@ -48,6 +60,10 @@
 
 /* Begin PBXFileReference section */
 		295C3D54248C1A87002A3E0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		295CC31324C78A5D0050B330 /* LocalPusherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalPusherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		295CC31524C78A5D0050B330 /* LocalPusherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPusherTests.swift; sourceTree = "<group>"; };
+		295CC31724C78A5D0050B330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		295CC31E24C78A940050B330 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		29A2F616248AE6F40057FC9C /* LocalPusher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalPusher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A2F619248AE6F40057FC9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A2F61B248AE6F40057FC9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		295CC31024C78A5D0050B330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A2F613248AE6F40057FC9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,11 +107,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		295CC31424C78A5D0050B330 /* LocalPusherTests */ = {
+			isa = PBXGroup;
+			children = (
+				295CC31524C78A5D0050B330 /* LocalPusherTests.swift */,
+				295CC31724C78A5D0050B330 /* Info.plist */,
+			);
+			path = LocalPusherTests;
+			sourceTree = "<group>";
+		};
 		29A2F60D248AE6F40057FC9C = {
 			isa = PBXGroup;
 			children = (
 				29A2F618248AE6F40057FC9C /* LocalPusher */,
 				29A2F637248AEA5A0057FC9C /* LocalPusherNotificationExtension */,
+				295CC31424C78A5D0050B330 /* LocalPusherTests */,
 				29A2F632248AEA5A0057FC9C /* Frameworks */,
 				29A2F617248AE6F40057FC9C /* Products */,
 			);
@@ -99,6 +132,7 @@
 			children = (
 				29A2F616248AE6F40057FC9C /* LocalPusher.app */,
 				29A2F631248AEA5A0057FC9C /* LocalPusherNotificationExtension.appex */,
+				295CC31324C78A5D0050B330 /* LocalPusherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +148,7 @@
 				29A2F624248AE6F60057FC9C /* LaunchScreen.storyboard */,
 				29A2F627248AE6F60057FC9C /* Info.plist */,
 				295C3D54248C1A87002A3E0A /* Constants.swift */,
+				295CC31E24C78A940050B330 /* Utilities.swift */,
 			);
 			path = LocalPusher;
 			sourceTree = "<group>";
@@ -140,6 +175,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		295CC31224C78A5D0050B330 /* LocalPusherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 295CC31C24C78A5D0050B330 /* Build configuration list for PBXNativeTarget "LocalPusherTests" */;
+			buildPhases = (
+				295CC30F24C78A5D0050B330 /* Sources */,
+				295CC31024C78A5D0050B330 /* Frameworks */,
+				295CC31124C78A5D0050B330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				295CC31924C78A5D0050B330 /* PBXTargetDependency */,
+			);
+			name = LocalPusherTests;
+			productName = LocalPusherTests;
+			productReference = 295CC31324C78A5D0050B330 /* LocalPusherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		29A2F615248AE6F40057FC9C /* LocalPusher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A2F62A248AE6F60057FC9C /* Build configuration list for PBXNativeTarget "LocalPusher" */;
@@ -182,10 +235,14 @@
 		29A2F60E248AE6F40057FC9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Shawn Roller";
 				TargetAttributes = {
+					295CC31224C78A5D0050B330 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 29A2F615248AE6F40057FC9C;
+					};
 					29A2F615248AE6F40057FC9C = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -209,11 +266,19 @@
 			targets = (
 				29A2F615248AE6F40057FC9C /* LocalPusher */,
 				29A2F630248AEA5A0057FC9C /* LocalPusherNotificationExtension */,
+				295CC31224C78A5D0050B330 /* LocalPusherTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		295CC31124C78A5D0050B330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A2F614248AE6F40057FC9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +300,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		295CC30F24C78A5D0050B330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295CC32124C78A940050B330 /* Utilities.swift in Sources */,
+				295CC31624C78A5D0050B330 /* LocalPusherTests.swift in Sources */,
+				295CC33224C78BD80050B330 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A2F612248AE6F40057FC9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +317,7 @@
 				29A2F61E248AE6F40057FC9C /* ViewController.swift in Sources */,
 				29A2F61A248AE6F40057FC9C /* AppDelegate.swift in Sources */,
 				29A2F61C248AE6F40057FC9C /* SceneDelegate.swift in Sources */,
+				295CC31F24C78A940050B330 /* Utilities.swift in Sources */,
 				295C3D55248C1A87002A3E0A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295CC32024C78A940050B330 /* Utilities.swift in Sources */,
 				29A2F639248AEA5A0057FC9C /* NotificationViewController.swift in Sources */,
 				295C3D56248C1A87002A3E0A /* Constants.swift in Sources */,
 			);
@@ -258,6 +335,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		295CC31924C78A5D0050B330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29A2F615248AE6F40057FC9C /* LocalPusher */;
+			targetProxy = 295CC31824C78A5D0050B330 /* PBXContainerItemProxy */;
+		};
 		29A2F63F248AEA5A0057FC9C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 29A2F630248AEA5A0057FC9C /* LocalPusherNotificationExtension */;
@@ -293,6 +375,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		295CC31A24C78A5D0050B330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_FILE = LocalPusherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.offensivelybad.LocalPusherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalPusher.app/LocalPusher";
+			};
+			name = Debug;
+		};
+		295CC31B24C78A5D0050B330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_FILE = LocalPusherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.offensivelybad.LocalPusherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalPusher.app/LocalPusher";
+			};
+			name = Release;
+		};
 		29A2F628248AE6F60057FC9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,6 +610,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		295CC31C24C78A5D0050B330 /* Build configuration list for PBXNativeTarget "LocalPusherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				295CC31A24C78A5D0050B330 /* Debug */,
+				295CC31B24C78A5D0050B330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29A2F611248AE6F40057FC9C /* Build configuration list for PBXProject "LocalPusher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
