@@ -44,42 +44,42 @@ struct Questions {
         return question
     }
     var Activity: Question {
-        let answerOne = Answer(answer: "😟", nextQuestion: QuestionStrings.Eating.rawValue)
-        let answerTwo = Answer(answer: "😬", nextQuestion: QuestionStrings.Exercise.rawValue)
-        let answerThree = Answer(answer: "🙂", nextQuestion: QuestionStrings.Screens.rawValue)
-        let answerFour = Answer(answer: "😀", nextQuestion: QuestionStrings.Social.rawValue)
+        let answerOne = Answer(answer: "🍗", nextQuestion: QuestionStrings.Eating.rawValue)
+        let answerTwo = Answer(answer: "🏃‍♂️", nextQuestion: QuestionStrings.Exercise.rawValue)
+        let answerThree = Answer(answer: "👩‍💻", nextQuestion: QuestionStrings.Screens.rawValue)
+        let answerFour = Answer(answer: "👫", nextQuestion: QuestionStrings.Social.rawValue)
         let question = Question(question: QuestionStrings.Activity.rawValue, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree, answerFour: answerFour)
         return question
     }
     var Eating: Question {
-        let answerOne = Answer(answer: "😟")
-        let answerTwo = Answer(answer: "😬")
-        let answerThree = Answer(answer: "🙂")
-        let answerFour = Answer(answer: "😀")
+        let answerOne = Answer(answer: "🍸")
+        let answerTwo = Answer(answer: "🥬")
+        let answerThree = Answer(answer: "🍔")
+        let answerFour = Answer(answer: "☕️")
         let question = Question(question: QuestionStrings.Eating.rawValue, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree, answerFour: answerFour)
         return question
     }
     var Exercise: Question {
-        let answerOne = Answer(answer: "😟")
-        let answerTwo = Answer(answer: "😬")
-        let answerThree = Answer(answer: "🙂")
-        let answerFour = Answer(answer: "😀")
+        let answerOne = Answer(answer: "🤸‍♂️")
+        let answerTwo = Answer(answer: "🏋️‍♀️")
+        let answerThree = Answer(answer: "🧘‍♀️")
+        let answerFour = Answer(answer: "⛹️‍♀️")
         let question = Question(question: QuestionStrings.Exercise.rawValue, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree, answerFour: answerFour)
         return question
     }
     var Screens: Question {
-        let answerOne = Answer(answer: "😟")
-        let answerTwo = Answer(answer: "😬")
-        let answerThree = Answer(answer: "🙂")
-        let answerFour = Answer(answer: "😀")
+        let answerOne = Answer(answer: "📺")
+        let answerTwo = Answer(answer: "📱")
+        let answerThree = Answer(answer: "👩‍💻")
+        let answerFour = Answer(answer: "🎮")
         let question = Question(question: QuestionStrings.Screens.rawValue, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree, answerFour: answerFour)
         return question
     }
     var Social: Question {
-        let answerOne = Answer(answer: "😟")
-        let answerTwo = Answer(answer: "😬")
-        let answerThree = Answer(answer: "🙂")
-        let answerFour = Answer(answer: "😀")
+        let answerOne = Answer(answer: "👨‍👩‍👧‍👦")
+        let answerTwo = Answer(answer: "🎸")
+        let answerThree = Answer(answer: "🎳")
+        let answerFour = Answer(answer: "🎉")
         let question = Question(question: QuestionStrings.Social.rawValue, answerOne: answerOne, answerTwo: answerTwo, answerThree: answerThree, answerFour: answerFour)
         return question
     }
