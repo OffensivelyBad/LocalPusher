@@ -18,17 +18,70 @@ class LocalPusherTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testOverallQuestion() throws {
         let util = Utilities()
-        let answers = util.getAnswers(forAnswer: AnswerOne.First.rawValue)
-        print(answers)
+        let questions = Questions()
+        let question = questions.Overall
+        let answer = question.answerTwo.answer
+        let nextQuestion = util.getNextQuestion(forAnswer: answer, andQuestion: question)
+        
+        let expectedQuestion = questions.Activity
+        
+        XCTAssert(nextQuestion == expectedQuestion)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testActivityQuestion() throws {
+        let util = Utilities()
+        let questions = Questions()
+        let question = questions.Activity
+        let answer = question.answerOne.answer
+        let nextQuestion = util.getNextQuestion(forAnswer: answer, andQuestion: question)
+        
+        let expectedQuestion = questions.Eating
+        
+        XCTAssert(nextQuestion == expectedQuestion)
+    }
+
+    func testEatingQuestion() throws {
+        let util = Utilities()
+        let questions = Questions()
+        let question = questions.Eating
+        let answer = question.answerThree.answer
+        let nextQuestion = util.getNextQuestion(forAnswer: answer, andQuestion: question)
+        
+        let expectedQuestion: Question? = nil
+        
+        XCTAssert(nextQuestion == expectedQuestion)
+    }
+
+    func testExerciseQuestion() throws {
+        let util = Utilities()
+        let questions = Questions()
+        let question = questions.Exercise
+        let answer = question.answerFour.answer
+        let nextQuestion = util.getNextQuestion(forAnswer: answer, andQuestion: question)
+        
+        XCTAssertNil(nextQuestion)
+    }
+
+    func testScreensQuestion() throws {
+        let util = Utilities()
+        let questions = Questions()
+        let question = questions.Screens
+        let answer = question.answerOne.answer
+        let nextQuestion = util.getNextQuestion(forAnswer: answer, andQuestion: question)
+        
+        XCTAssertNil(nextQuestion)
+    }
+
+    func testSocialQuestion() throws {
+        let util = Utilities()
+        let questions = Questions()
+        let question = questions.Social
+        let answer = question.answerTwo.answer
+        let nextQuestion = util.getNextQuestion(forAnswer: answer, andQuestion: question)
+        
+        XCTAssertNil(nextQuestion)
     }
 
 }
