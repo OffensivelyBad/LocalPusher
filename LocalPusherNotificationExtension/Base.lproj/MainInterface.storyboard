@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIa-yZ-fpD">
-                                <rect key="frame" x="0.0" y="15" width="320" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MIa-yZ-fpD">
+                                <rect key="frame" x="4" y="15" width="312" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,6 +28,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <state key="normal" title="😟"/>
+                                        <connections>
+                                            <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="YBb-Ih-X5D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9Q-6h-qW9">
                                         <rect key="frame" x="80" y="0.0" width="80" height="64"/>
@@ -63,11 +66,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="khG-Ud-Ytx" secondAttribute="trailing" id="4u3-k0-MaE"/>
-                            <constraint firstAttribute="trailing" secondItem="MIa-yZ-fpD" secondAttribute="trailing" id="9Ds-mI-kE1"/>
-                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="MIa-yZ-fpD" secondAttribute="trailing" id="Bxb-og-lm9"/>
-                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="EjC-pB-RfL"/>
+                            <constraint firstAttribute="trailing" secondItem="MIa-yZ-fpD" secondAttribute="trailing" constant="4" id="9Ds-mI-kE1"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="MIa-yZ-fpD" secondAttribute="trailing" constant="4" id="Bxb-og-lm9"/>
+                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="4" id="EjC-pB-RfL"/>
                             <constraint firstItem="khG-Ud-Ytx" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="HAR-ae-5ot"/>
-                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="VmV-7g-BjY"/>
+                            <constraint firstItem="MIa-yZ-fpD" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="4" id="VmV-7g-BjY"/>
                             <constraint firstItem="khG-Ud-Ytx" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="6" id="t6B-Ax-gTa"/>
                             <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="khG-Ud-Ytx" secondAttribute="bottom" constant="6" id="uGv-6x-bxT"/>
                             <constraint firstItem="MIa-yZ-fpD" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="15" id="uuT-H6-uzn"/>

@@ -15,10 +15,10 @@ struct Constants {
 enum QuestionStrings: String {
     case Overall = "How are you feeling?"
     case Activity = "What have you been up to?"
-    case Eating = "Thanks! What went down your gullet?"
-    case Exercise = "Thanks! What self-care were you doing?"
-    case Screens = "Thanks! What were you looking at?"
-    case Social = "Thanks! What were you doing with peeps?"
+    case Eating = "What went down your gullet?"
+    case Exercise = "What self-care were you doing?"
+    case Screens = "What were you looking at?"
+    case Social = "What were you doing with peeps?"
 }
 
 struct Answer {

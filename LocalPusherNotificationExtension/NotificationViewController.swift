@@ -40,16 +40,18 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     func didReceive(_ notification: UNNotification) {
-//        self.label?.text = notification.request.content.body
+        
     }
     
     @IBAction func coverButtonTapped(_ sender: UIButton?) {
         guard let button = sender, let label = button.titleLabel, let buttonTitle = label.text, let currentQuestion = self.currentQuestion else { return }
         
+        print("Answer '\(buttonTitle)' selected")
+        
         let nextQuestion = self.util.getNextQuestion(forAnswer: buttonTitle, andQuestion: currentQuestion)
+        self.util.save(answer: buttonTitle, forQuestion: currentQuestion)
         
         if let nextQuestion = nextQuestion {
-            // TODO: save the answer and animate to the next question
             self.animateToQuestion(nextQuestion)
         } else {
             self.animateToEnd()
