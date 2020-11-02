@@ -21,7 +21,7 @@ enum QuestionStrings: String {
     case Social = "What were you doing with peeps?"
 }
 
-struct Answer {
+struct Answer: Equatable {
     var answer: String
     var nextQuestion: String?
 }
