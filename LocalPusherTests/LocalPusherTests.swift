@@ -94,5 +94,16 @@ class LocalPusherTests: XCTestCase {
         let actualAnswer = util.getAnswer(fromAnswerString: answer, forQuestion: question)
         XCTAssertEqual(actualAnswer, expectedAnswer)
     }
+    
+    func testGetAnswerFour() throws {
+        let util = Utilities()
+        let questions = Questions()
+        let question = questions.Activity
+        let answer = question.answerFour.answer
+        let expectedAnswer = question.answerFour
+        
+        let actualAnswer = util.getAnswer(fromAnswerString: answer, forQuestion: question)
+        XCTAssertEqual(actualAnswer, expectedAnswer)
+    }
 
 }
